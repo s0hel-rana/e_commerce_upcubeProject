@@ -38,12 +38,12 @@
         <!-- Begin page -->
         <div id="layout-wrapper">
 
-            <x-partials.navbar/>
+            <x-partials.backend.navbar/>
             
 
             <!-- ========== Left Sidebar Start ========== -->
             
-            <x-partials.sidebar/>
+            <x-partials.backend.sidebar/>
 
             <!-- Left Sidebar End -->
 
@@ -57,7 +57,7 @@
                 {{ $slot }}
                 <!-- End Page-content -->
                
-                <x-partials.footer/>
+                <x-partials.backend.footer/>
                 
             </div>
             <!-- end main content-->

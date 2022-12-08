@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware(['auth']);
+Route::get('/frontend', function () {
+    return view('/frontend_dashboard');
+})->middleware(['auth'])->name('frontend');
 
 Route::get('/dashboard', function () {
     return view('welcome');
