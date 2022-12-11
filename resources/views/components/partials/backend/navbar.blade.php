@@ -67,6 +67,10 @@
         
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="{{ asset('ui/backend') }}/assets/images/flags/bangladesh.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">Bangladesh</span>
+                    </a>
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <img src="{{ asset('ui/backend') }}/assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                     </a>
 
