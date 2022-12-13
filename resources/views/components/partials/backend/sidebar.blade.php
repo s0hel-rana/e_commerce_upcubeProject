@@ -27,10 +27,14 @@
                 </li>
 
                 <li>
-                    <a href="calendar.html" class=" waves-effect">
-                        <i class="ri-calendar-2-line"></i>
-                        <span>Calendar</span>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-home-line"></i>
+                        <span>Home Slider</span>
                     </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('home.slider') }}">Home</a></li>
+                        
+                    </ul>
                 </li>
     
                 <li>

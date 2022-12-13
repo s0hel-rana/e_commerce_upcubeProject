@@ -1,13 +1,14 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\myController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/frontend', function () {
+Route::get('/home', function () {
     return view('/frontend_dashboard');
 })->middleware(['auth'])->name('frontend');
 
@@ -29,4 +30,7 @@ Route::controller(AdminController::class)->group(function(){
 
     Route::get('/change_password','ChangePassword')->name('password_change');
     Route::post('/update_password','updatePassword')->name('password_update');
+});
+Route::controller(HomeSliderController::class)->group(function(){
+    Route::get('/home_slider','homeSlider')->name('home.slider');
 });

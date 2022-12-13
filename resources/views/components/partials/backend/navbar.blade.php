@@ -61,10 +61,14 @@
             <div class="dropdown d-none d-sm-inline-block">
                 <button type="button" class="btn header-item waves-effect"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="" src="{{ asset('ui/backend') }}/assets/images/flags/us.jpg" alt="Header Language" height="16">
+                    <img class="" src="{{ asset('ui/backend') }}/assets/images/flags/bangladesh.png" alt="Header Language" height="16">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
         
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="{{ asset('ui/backend') }}/assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">US</span>
+                    </a>
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <img src="{{ asset('ui/backend') }}/assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
