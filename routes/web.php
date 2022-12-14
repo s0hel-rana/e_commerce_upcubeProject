@@ -33,4 +33,5 @@ Route::controller(AdminController::class)->group(function(){
 });
 Route::controller(HomeSliderController::class)->group(function(){
     Route::get('/home_slider','homeSlider')->name('home.slider');
+    Route::post('/home_slider/update','homeSliderUpdate')->name('home.slider.update');
 });
