@@ -13,3 +13,4 @@ class HomeSliderController extends Controller
         return view('Backend.admin.home.home_slider',compact('homeSlider'));
     }
 }
+
