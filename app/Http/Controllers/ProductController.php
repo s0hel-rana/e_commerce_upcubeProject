@@ -9,4 +9,9 @@ class ProductController extends Controller
     public function index(){
         return view('Backent.products.index');
     }
+
+
+    public function create(){
+
+    }
 }
