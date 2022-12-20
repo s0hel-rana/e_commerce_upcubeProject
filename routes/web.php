@@ -13,6 +13,28 @@ Route::get('/home', function () {
     return view('/frontend_dashboard');
 })->middleware(['auth'])->name('frontend');
 
+Route::get('/about', function () {
+    return view('frontend.about_index');
+})->middleware(['auth'])->name('about');
+Route::get('/service', function () {
+    return view('frontend.service');
+})->middleware(['auth'])->name('service');
+Route::get('/portfolio', function () {
+    return view('frontend.portfolio');
+})->middleware(['auth'])->name('portfolio');
+Route::get('/portfolio/details', function () {
+    return view('frontend.portfolio_details');
+})->middleware(['auth'])->name('portfolio.details');
+Route::get('/ourblog', function () {
+    return view('frontend.ourblog');
+})->middleware(['auth'])->name('ourblog');
+Route::get('/ourblog/details', function () {
+    return view('frontend.ourblog_details');
+})->middleware(['auth'])->name('ourblog.details');
+Route::get('/contact', function () {
+    return view('frontend.contact');
+})->middleware(['auth'])->name('contact');
+
 Route::get('/dashboard', function () {
     return view('welcome');
 })->middleware(['auth'])->name('dashboard');
@@ -40,5 +62,6 @@ Route::controller(HomeSliderController::class)->group(function(){
     // about page
 Route::controller(AboutController::class)->group(function(){
     Route::get('/about_page','index')->name('about.page');
+    Route::post('/about_page/update','aboutPageUpdate')->name('about.page.update');
     
 });

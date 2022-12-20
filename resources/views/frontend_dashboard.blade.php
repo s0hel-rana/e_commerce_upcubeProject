@@ -4,6 +4,7 @@
     <?php
     
     $homeSlider = App\Models\HomeSlider::find(1);
+    $aboutPage = App\Models\About::find(1);
     
     ?>
 
@@ -20,7 +21,6 @@
                         <div class="banner__content">
                             <h2 class="title wow fadeInUp" data-wow-delay=".2s"><span>{{  $homeSlider->title  }}</span> <br></h2>
                             <p class="wow fadeInUp" data-wow-delay=".4s">{{  $homeSlider->shor_description  }}</p>
-                            {{-- <a href="about.html" class="btn banner__btn wow fadeInUp" data-wow-delay=".6s">more about me</a> --}}
                         </div>
                     </div>
                 </div>
@@ -73,18 +73,18 @@
                     <div class="col-lg-6">
                         <div class="about__content">
                             <div class="section__title">
-                                <span class="sub-title">01 - About me</span>
-                                <h2 class="title">I have transform your ideas into remarkable digital products</h2>
+                                <span class="sub-title">{{ $aboutPage->title }}</span>
+                                <h2 class="title">{{ $aboutPage->short_title }}</h2>
                             </div>
                             <div class="about__exp">
                                 <div class="about__exp__icon">
                                     <img src="{{ asset('ui/frontend') }}/assets/img/icons/about_icon.png" alt="">
                                 </div>
                                 <div class="about__exp__content">
-                                    <p>20+ Years Experience In this game, Means <br> Product Designing</p>
+                                    <p>{{ $aboutPage->short_disc }}</p>
                                 </div>
                             </div>
-                            <p class="desc">I love to work in User Experience & User Interface designing. Because I love to solve the design problem and find easy and better solutions to solve it. I always try my best to make good user interface with the best user experience. I have been working as a UX Designer</p>
+                            <p class="desc">{{ $aboutPage->long_disc }}</p>
                             <a href="about.html" class="btn">Download my resume</a>
                         </div>
                     </div>
