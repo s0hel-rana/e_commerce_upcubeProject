@@ -39,29 +39,27 @@ Route::get('/dashboard', function () {
     return view('welcome');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
-Route::get('/product',[ProductController::class,'index']);
 
-Route::controller(AdminController::class)->group(function(){
-    Route::get('/admin_logout','destroy')->name('admin.logout');
-    Route::get('/admin_profile','profile')->name('admin.profile');
-    Route::get('/admin_edit_profile','editProfile')->name('admin.edit.profile');
-    Route::post('/admin_store_profile','storeProfile')->name('admin.store.profile');
+Route::controller(AdminController::class)->group(function () {
+    Route::get('/admin_logout', 'destroy')->name('admin.logout');
+    Route::get('/admin_profile', 'profile')->name('admin.profile');
+    Route::get('/admin_edit_profile', 'editProfile')->name('admin.edit.profile');
+    Route::post('/admin_store_profile', 'storeProfile')->name('admin.store.profile');
 
     // change_password
 
-    Route::get('/change_password','ChangePassword')->name('password_change');
-    Route::post('/update_password','updatePassword')->name('password_update');
+    Route::get('/change_password', 'ChangePassword')->name('password_change');
+    Route::post('/update_password', 'updatePassword')->name('password_update');
 });
-    // home page
-Route::controller(HomeSliderController::class)->group(function(){
-    Route::get('/home_slider','homeSlider')->name('home.slider');
-    Route::post('/home_slider/update','homeSliderUpdate')->name('home.slider.update');
+// home page
+Route::controller(HomeSliderController::class)->group(function () {
+    Route::get('/home_slider', 'homeSlider')->name('home.slider');
+    Route::post('/home_slider/update', 'homeSliderUpdate')->name('home.slider.update');
 });
-    // about page
-Route::controller(AboutController::class)->group(function(){
-    Route::get('/about_page','index')->name('about.page');
-    Route::post('/about_page/update','aboutPageUpdate')->name('about.page.update');
-    
+// about page
+Route::controller(AboutController::class)->group(function () {
+    Route::get('/about_page', 'index')->name('about.page');
+    Route::post('/about_page/update', 'aboutPageUpdate')->name('about.page.update');
 });

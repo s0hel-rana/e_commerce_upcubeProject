@@ -27,14 +27,14 @@
                                 <div class="mb-3">
                                     <label for="" class="col-sm-2 col-form-label">Short Description</label>
                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" value="{{ $aboutPage->short_disc }}" name="short_disc">
+                                    <textarea class="form-control" name="short_disc" maxlength="225" rows="3">{{ $aboutPage->short_disc }}</textarea>
                                    </div>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="" class="col-sm-2 col-form-label">Long Description</label>
                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" value="{{ $aboutPage->long_disc }}" name="long_disc">
+                                        <textarea class="form-control" name="long_disc" id="elm1" >{{ $aboutPage->long_disc }}</textarea>
                                    </div>
                                 </div>
 
